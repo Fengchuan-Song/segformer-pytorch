@@ -47,8 +47,8 @@ from utils.utils_fit_v2 import fit_one_epoch
 '''
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--save_dir", type=str, default='/data/SegFromer')
-    parser.add_argument('--wandb_path', type=str, default='/data/SegFromer/wandb', help='path of saving wandb files locally')
+    parser.add_argument("--save_dir", type=str, default='/root/autodl-tmp/SegFromer')
+    parser.add_argument('--wandb_path', type=str, default='/root/autodl-tmp/SegFromer/wandb', help='path of saving wandb files locally')
     parser.add_argument('--wandb_name', type=str, default='SegFromer',
                         help='name of current training procedure of wandb')
     parser.add_argument('--description', type=str, default=
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     #------------------------------------------------------------------#
     #   VOCdevkit_path  数据集路径
     #------------------------------------------------------------------#
-    VOCdevkit_path  = '/data_ssd/datasets/WaterScenes'
+    VOCdevkit_path  = '/root/autodl-tmp/WaterScenes'
     #------------------------------------------------------------------#
     #   建议选项：
     #   种类少（几类）时，设置为True
