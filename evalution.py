@@ -273,17 +273,6 @@ if __name__ == "__main__":
     #------------------------------------------------------------------#
     num_workers     = 4
 
-    wandb.init(
-        project='Achelous++',
-        name=args.wandb_name,
-        dir=args.wandb_path,
-        config={
-            "model_description": args.description,
-            "architecture": "Origin",
-            "dataset": "WaterSence",
-        }
-    )
-
     seed_everything(seed)
     #------------------------------------------------------#
     #   设置用到的显卡
@@ -350,7 +339,7 @@ if __name__ == "__main__":
     #----------------------#
     if local_rank == 0:
         time_str        = datetime.datetime.strftime(datetime.datetime.now(),'%Y_%m_%d_%H_%M_%S')
-        log_dir         = os.path.join(save_dir, "loss_" + str(time_str))
+        log_dir         = os.path.join(save_dir, "eval_" + str(time_str))
         loss_history    = LossHistory(log_dir, model, input_shape=input_shape)
     else:
         loss_history    = None
