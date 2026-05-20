@@ -378,7 +378,7 @@ if __name__ == "__main__":
     #---------------------------#
     #   读取数据集对应的txt
     #---------------------------#
-    with open(os.path.join(VOCdevkit_path, "MIPC_SemanticSegmentation/2007_val.txt"),"r") as f:
+    with open(os.path.join(VOCdevkit_path, "MIPC_SemanticSegmentation/2007_test.txt"),"r") as f:
         val_lines = f.readlines()
     num_val     = len(val_lines)
 
